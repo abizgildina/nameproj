@@ -1,31 +1,44 @@
 import java.util.Date;
-
+/**
+ * Класс нужен для описания Входящего документа
+ */
 public class Incoming extends Document {
-    private String senderName;      //Отправитель
-    private String Addressee;    //Адресат
-    private int outgoingNumber;             //Исходящий номер
-    private Date outgoingDate;        //Исходящая дата регистрации
-
+    /**
+     * Создание поля для отправителя докуемента
+     */
+    private String sender;
+    /**
+     * Создание поля для адресата докуемента
+     */
+    private String addressee;
+    /**
+     * Создание поля для исходящего номера докуемента
+     */
+    private int outgoingNumber;
+    /**
+     * Создание поля для исходящей даты регистрации докуемента
+     */
+    private Date outgoingDate;
 
     @Override
     public String toString() {
         return "    Входящий " + super.toString();
     }
 
-    public String getSenderName() {
-        return senderName;
+    public String getSender() {
+        return sender;
     }
 
-    public void setSenderName(String senderName) {
-        this.senderName = senderName;
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 
     public String getAddressee() {
-        return Addressee;
+        return addressee;
     }
 
     public void setAddressee(String addressee) {
-        this.Addressee = addressee;
+        this.addressee = addressee;
     }
 
     public int getOutgoingNumber() {

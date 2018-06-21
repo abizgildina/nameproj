@@ -1,28 +1,34 @@
-import java.util.Date;
-
+/**
+ * Класс нужен для описания Исходящего документа
+ */
 public class Outgoing extends Document {
-    private String outAddressee;   //Адресат
-    private String delivery;        //Способ доставки
-
+    /**
+     * Создание поля для адресата докуемента
+     */
+    private String addressee;
+    /**
+     * Создание поля для способа доставки докуемента
+     */
+    private String deliveryMethod;        //Способ доставки
 
     @Override
     public String toString() {
         return "    Исходящий " + super.toString();
     }
 
-    public String getOutAddressee() {
-        return outAddressee;
+    public String getAddressee() {
+        return addressee;
     }
 
-    public void setOutAddressee(String outAddressee) {
-        this.outAddressee = outAddressee;
+    public void setAddressee(String addressee) {
+        this.addressee = addressee;
     }
 
-    public String getDelivery() {
-        return delivery;
+    public String getDeliveryMethod() {
+        return deliveryMethod;
     }
 
-    public void setDelivery(String delivery) {
-        this.delivery = delivery;
+    public void setDeliveryMethod(String deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
     }
 }

@@ -4,30 +4,29 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TaskFactory {
+    private final Random rand = new Random();
+    List<String> executorList = Arrays.asList("Исполнитель 1","Исполнитель 2","Исполнитель 3");
+    List<String> attributeList = Arrays.asList("Контроль"," ");
+    List<String> controllerList = Arrays.asList("Контролер 1","Контролер 2","Контролер 3");
 
-        private final Random rand = new Random();
+    /**
+     * Метод для заполнения документа рандомными значениями
+     * @return Документ Поручение
+     */
+    public  Document getTask() {
+        String executor = executorList.get(rand.nextInt(executorList.size()-1));
+        String attributeControl = attributeList.get(rand.nextInt(executorList.size()-1));
+        Date taskDate = new Date(Math.abs(System.currentTimeMillis() - rand.nextLong()));
+        String controllerName = controllerList.get(rand.nextInt(controllerList.size()));
 
-        List<String> exeList = Arrays.asList("Исполнитель 1","Исполнитель 2","Исполнитель 3");
+        //Создание объекта "Поручение" и заполнение полей объекта
+        Task task = new Task();
+        task.setTaskDate(taskDate);
+        task.setTaskRealise(rand.nextInt(20)+1);
+        task.setAttributeControl(attributeControl);
+        task.setExecutor(executor);
+        task.setControllerName(controllerName);
 
-        List<String> atList = Arrays.asList("Контроль"," ");
-
-        List<String> controlList = Arrays.asList("Контролер 1","Контролер 2","Контролер 3");
-
-        public  Document getTask() {
-
-            String exeName = exeList.get(rand.nextInt(exeList.size()-1));
-            String atControl = atList.get(rand.nextInt(exeList.size()-1));
-            Date taskDate = new Date(Math.abs(System.currentTimeMillis() - rand.nextLong()));
-            String controlName = controlList.get(rand.nextInt(controlList.size()));
-
-            Document task = new Task();
-
-            ((Task)task).setTaskDate(taskDate);
-            ((Task)task).setTaskRealise(rand.nextInt(20)+1);
-            ((Task)task).setAttribControl(atControl);
-            ((Task)task).setExecuter(exeName);
-            ((Task)task).setControlName(controlName);
-
-            return task;
-        }
+        return task;
+    }
 }

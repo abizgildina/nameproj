@@ -1,11 +1,28 @@
 import java.util.Date;
-
+/**
+ * Класс нужен для описания докуемента Поручение
+ */
 public class Task extends Document {
-    private Date taskDate;          //Дата выдачи поручения
-    private int taskRealise;        //Срок исполнения поручения
-    private String executer;     //Ответственный исполнитель
-    private String attribControl;   //Признак контрольности
-    private String controlName; //Имя контроллера
+    /**
+     * Создание поля для даты выдачи поручения
+     */
+    private Date taskDate;
+    /**
+     * Создание поля для срока исполнения поручения
+     */
+    private int taskRealise;
+    /**
+     * Создание поля для ответственного исполнителя
+     */
+    private String executor;
+    /**
+     * Создание поля для признака контрольности докуемента
+     */
+    private String attributeControl;
+    /**
+     * Создание поля для имени контролера поручения
+     */
+    private String controllerName;
 
     @Override
     public String toString() {
@@ -28,28 +45,28 @@ public class Task extends Document {
         this.taskRealise = taskRealise;
     }
 
-    public String getExecuter() {
-        return executer;
+    public String getExecutor() {
+        return executor;
     }
 
-    public void setExecuter(String executer) {
-        this.executer = executer;
+    public void setExecutor(String executor) {
+        this.executor = executor;
     }
 
-    public String getAttribControl() {
-        return attribControl;
+    public String getAttributeControl() {
+        return attributeControl;
     }
 
-    public void setAttribControl(String attribControl) {
-        this.attribControl = attribControl;
+    public void setAttributeControl(String attributeControl) {
+        this.attributeControl = attributeControl;
     }
 
-    public String getControlName() {
-        return controlName;
+    public String getControllerName() {
+        return controllerName;
     }
 
-    public void setControlName(String controlName) {
-        this.controlName = controlName;
+    public void setControllerName(String controllerName) {
+        this.controllerName = controllerName;
     }
 }
 

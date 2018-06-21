@@ -3,8 +3,12 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DateFormat {
+    /**
+     * Метод, принимающий дату и возвращающий ее в формате "dd.MM.yyyy"
+     * @param date Дата
+     * @return Форматрованная дата
+     */
     public static String DateFormat(Date date) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy",Locale.ENGLISH);
-        return dateFormat.format(date);
+        return new SimpleDateFormat("dd.MM.yyyy", Locale.ENGLISH).format(date);
     }
 }

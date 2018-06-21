@@ -1,53 +1,74 @@
 import java.util.Date;
 
+/**
+ * Класс для описания документа
+ */
+
 public abstract class Document implements Comparable<Document>, Storable{
-
-    private long idDoc;           //идентификатор
-    private String nameDoc;         //название документа
-    private String textDoc;         //текст документа
-    private Long registrationNumber;          //регистрационный номер
-    private Date dateRegistration;           //дата регистрации документа
-    private String author;         //автор документа
-
+    /**
+     * Создание поля для идентификатора докуемента
+     */
+    private long idDocument;
+    /**
+     * Создание поля для имени докуемента
+     */
+    private String nameDocument;
+    /**
+     * Создание поля для текста докуемента
+     */
+    private String textDocument;
+    /**
+     * Создание поля для регистрационного номера докуемента
+     */
+    private Long registrationNumber;
+    /**
+     * Создание поля для даты регистрации докуемента
+     */
+    private Date dateRegistration;
+    /**
+     * Создание поля для имени автора докуемента
+     */
+    private String authorName;
 
     public int compareTo(Document s){
-        if (dateRegistration.compareTo(s.dateRegistration)!=0) {
+        //условие на проверку неравенства дат
+        if (dateRegistration.compareTo(s.dateRegistration) != 0) {
+            //Если не равны, сортировать по дате
             return dateRegistration.compareTo(s.dateRegistration);
         }
         else {
+            //Если равны сортировать по регистрационному номеру
             return registrationNumber.compareTo(s.registrationNumber);
         }
     }
 
-
     @Override
     public String toString() {
-        return
-                "№" + idDoc +" от " + DateFormat.DateFormat(dateRegistration) + ". " + nameDoc;
+        return "№" + idDocument +" от " + DateFormat.DateFormat(dateRegistration) + ". " + nameDocument;
     }
 
-    public long getIdDoc() {
-        return idDoc;
+    public long getIdDocument() {
+        return idDocument;
     }
 
-    public void setIdDoc(long idDoc) {
-        this.idDoc = idDoc;
+    public void setIdDocument(long idDocument) {
+        this.idDocument = idDocument;
     }
 
-    public String getNameDoc() {
-        return nameDoc;
+    public String getNameDocument() {
+        return nameDocument;
     }
 
-    public void setNameDoc(String nameDoc) {
-        this.nameDoc = nameDoc;
+    public void setNameDocument(String nameDocument) {
+        this.nameDocument = nameDocument;
     }
 
-    public String getTextDoc() {
-        return textDoc;
+    public String getTextDocument() {
+        return textDocument;
     }
 
-    public void setTextDoc(String textDoc) {
-        this.textDoc = textDoc;
+    public void setTextDocument(String textDocument) {
+        this.textDocument = textDocument;
     }
 
     public long getRegnum(long regNum) {
@@ -66,12 +87,12 @@ public abstract class Document implements Comparable<Document>, Storable{
         this.dateRegistration = dateRegistration;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 }
 
