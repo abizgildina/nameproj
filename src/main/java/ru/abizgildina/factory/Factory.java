@@ -35,7 +35,7 @@ public class Factory {
 
         authorName = authorList.get(rand.nextInt(authorList.size()));
 
-        //Заполнение полей объекта рандомными значениями
+        //Заполнение общих полей объекта рандомными значениями
         document.setIdDocument((long) (rand.nextInt(1000000) + 1));
         document.setAuthorName(authorName);
         document.setRegnum(registrationNumber);
