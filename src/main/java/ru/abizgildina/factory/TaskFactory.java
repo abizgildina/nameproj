@@ -12,10 +12,10 @@ public class TaskFactory extends DocumentFactory{
      * @return Документ Поручение
      */
     public Document getDocument() {
-        String executor = executorList.get(rand.nextInt(executorList.size()-1));
-        String attributeControl = attributeList.get(rand.nextInt(executorList.size()-1));
+        String executor = humanList.get(rand.nextInt(humanList.size()-1));
+        Boolean attributeControl = attributeList.get(rand.nextInt(attributeList.size()-1));
         Date taskDate = new Date(Math.abs(System.currentTimeMillis() - rand.nextLong()));
-        String controllerName = controllerList.get(rand.nextInt(controllerList.size()));
+        String controllerName = humanList.get(rand.nextInt(humanList.size()));
 
         //Создание объекта "Поручение" и заполнение полей объекта
         Task task = new Task();

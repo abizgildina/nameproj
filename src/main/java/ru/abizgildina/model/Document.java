@@ -13,15 +13,15 @@ public abstract class Document implements Comparable<Document>, Storable {
     /**
      * Создание поля для идентификатора докуемента
      */
-    private long idDocument;
+    private long id;
     /**
      * Создание поля для имени докуемента
      */
-    private String nameDocument;
+    private String name;
     /**
      * Создание поля для текста докуемента
      */
-    private String textDocument;
+    private String text;
     /**
      * Создание поля для регистрационного номера докуемента
      */
@@ -49,31 +49,31 @@ public abstract class Document implements Comparable<Document>, Storable {
 
     @Override
     public String toString() {
-        return "№" + idDocument +" от " + DateFormat.format(dateRegistration) + ". " + nameDocument;
+        return "№" + id +" от " + DateFormat.format(dateRegistration) + ". " + name;
     }
 
-    public long getIdDocument() {
-        return idDocument;
+    public long getId() {
+        return id;
     }
 
-    public void setIdDocument(long idDocument) {
-        this.idDocument = idDocument;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getNameDocument() {
-        return nameDocument;
+    public String getName() {
+        return name;
     }
 
-    public void setNameDocument(String nameDocument) {
-        this.nameDocument = nameDocument;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTextDocument() {
-        return textDocument;
+    public String getText() {
+        return text;
     }
 
-    public void setTextDocument(String textDocument) {
-        this.textDocument = textDocument;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public long getRegnum(long regNum) {

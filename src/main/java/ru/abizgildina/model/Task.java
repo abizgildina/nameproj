@@ -20,7 +20,7 @@ public class Task extends Document {
     /**
      * Создание поля для признака контрольности докуемента
      */
-    private String attributeControl;
+    private Boolean attributeControl;
     /**
      * Создание поля для имени контролера поручения
      */
@@ -55,11 +55,11 @@ public class Task extends Document {
         this.executor = executor;
     }
 
-    public String getAttributeControl() {
+    public Boolean getAttributeControl() {
         return attributeControl;
     }
 
-    public void setAttributeControl(String attributeControl) {
+    public void setAttributeControl(Boolean attributeControl) {
         this.attributeControl = attributeControl;
     }
 
@@ -69,6 +69,10 @@ public class Task extends Document {
 
     public void setControllerName(String controllerName) {
         this.controllerName = controllerName;
+    }
+
+    public String getStoreName() {
+        return "Поручение";
     }
 }
 

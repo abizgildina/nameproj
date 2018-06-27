@@ -58,4 +58,8 @@ public class Incoming extends Document {
     public void setOutgoingDate(Date outgoingDate) {
         this.outgoingDate = outgoingDate;
     }
+
+    public String getStoreName() {
+        return "Входящий";
+    }
 }

@@ -13,8 +13,8 @@ public class IncomingFactory extends DocumentFactory {
      */
     @Override
     public Document getDocument(){
-        String sender = senderList.get(rand.nextInt(senderList.size()));
-        String addressee = addresseeList.get(rand.nextInt(addresseeList.size()));
+        String sender = humanList.get(rand.nextInt(humanList.size()));
+        String addressee = humanList.get(rand.nextInt(humanList.size()));
         Date outgoingDate = new Date(Math.abs(System.currentTimeMillis() - rand.nextLong()));
 
         //Создание объекта "Входящие" и заполнение полей объекта
