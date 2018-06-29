@@ -11,7 +11,7 @@ public class OutgoingFactory extends DocumentFactory{
     @Override
     public Document getDocument(){
         String deliveryMethod = deliveryMethodList.get(rand.nextInt(deliveryMethodList.size()));
-        String addressee = humanList.get(rand.nextInt(deliveryMethodList.size()));
+        String addressee = humanList.get(rand.nextInt(humanList.size()));
 
         //Создание объекта "Исходящие" и заполнение полей объекта
         Outgoing outgoing = new Outgoing();

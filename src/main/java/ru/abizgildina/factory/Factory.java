@@ -24,7 +24,7 @@ public class Factory {
 
     public Document getDocument(DocumentType documentType) throws DocumentExistsException {
         Document document = documentType.getDocumentFactory().getDocument();
-        registrationNumber = ((long) rand.nextInt(100000) + 1);
+        registrationNumber = ((long) rand.nextInt(100000000) + 1);
         if (!checkRegnum(registrationNumber)) {
             throw new DocumentExistsException("ru.abizgildina.exceptions.DocumentExistsException",null);
         }
@@ -32,7 +32,7 @@ public class Factory {
         authorName = DocumentFactory.humanList.get(rand.nextInt(DocumentFactory.humanList.size()));
 
         //Заполнение общих полей объекта рандомными значениями
-        document.setId((long) (rand.nextInt(1000000) + 1));
+        document.setId((long) (rand.nextInt(100000) + 1));
         document.setAuthorName(authorName);
         document.setRegnum(registrationNumber);
         document.setDateRegistration(new Date(Math.abs(System.currentTimeMillis() - rand.nextLong())));

@@ -3,9 +3,6 @@ package ru.abizgildina.model;
 /**
  * Класс нужен для описания Исходящего документа
  */
-
-
-
 public class Outgoing extends Document {
     /**
      * Создание поля для адресата докуемента
